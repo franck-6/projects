@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^(www.)?dsadesarrollosinmobiliarios.com.ar$ [NC,OR]
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /public/$1 [L]
+RewriteCond %{HTTP_HOST} ^(www.)?dsadesarrollosinmobiliarios.com.ar$ [NC,OR]
+RewriteRule ^(/)?$ public/ [L]
